@@ -13,12 +13,20 @@ public class IKControl : MonoBehaviour
     [SerializeField]
     [Range(0,1)]
     private float PesoManoDerecha;
+    [SerializeField]
+    private Transform clavicula;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
     }
+
+    // private void LateUpdate()
+    // {
+    //     clavicula.LookAt(TargetManoDerecha, Vector3.down);
+    // }
+
     private void OnAnimatorIK()
     {
         if (animator)
